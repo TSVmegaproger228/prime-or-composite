@@ -6,15 +6,17 @@ int main() {
     cout << "Enter number: ";
     int s;
     cin >> s;
-    int j = 2;
     int flag = 0;
-    for (i = 2; i < s; i++) {
-        if (s % i == 0) {
-            flag = 1;
-            break;
-        }
-    }
-    if (flag == 0) {
+    if (s % 2 == 0) {flag = 1;}
+    else {
+        for (i = 3; i <= s/2; i++) {
+            if (s % i == 0) {
+                flag = 1;
+                break;}
+                }
+                }
+    if (s == 0 || s == 1) {cout << s << " isn't composite and isn't prime";}
+    else if (flag == 0) {
         cout << s << " is prime number\n"; //написано ан английском, так как кириллица превращается в странный набор букв при выводе
     }
     else {cout << s << " is composite number\n";}
