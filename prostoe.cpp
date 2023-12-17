@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstdio>
+#include <cmath>
+
 using namespace std;
 int i = 0;
 int main() {
@@ -9,7 +11,7 @@ int main() {
     int flag = 0;
     if (s % 2 == 0) {flag = 1;}
     else {
-        for (i = 3; i <= s/2; i++) {
+        for (i = 3; i <= pow(s, 1/2) + 1; i = i + 2) {
             if (s % i == 0) {
                 flag = 1;
                 break;}
